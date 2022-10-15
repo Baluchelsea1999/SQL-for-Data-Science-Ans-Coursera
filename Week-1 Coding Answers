@@ -1,4 +1,4 @@
-Retrieve all the data from the tracks table. Who is the composer for track 18?
+Q1)Retrieve all the data from the tracks table. Who is the composer for track 18?
 Answer: Select composer
 From Tracks
 where trackid = 18;
@@ -8,8 +8,9 @@ where trackid = 18;
 | AC/DC    |
 +----------+
 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Retrieve all data from the invoices table. What is the billing address for customer 31?
+Q3)Retrieve all data from the invoices table. What is the billing address for customer 31?
 Answer: Select billingaddress
 From Invoices
 where customerid = 31;
@@ -25,6 +26,7 @@ where customerid = 31;
 | 194A Chain Lake Drive |
 +-----------------------+
 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Return the playlist id, and name from the playlists table. How many playlists are there? Which would you classify is your favorite from this list?
 Answer:Select Playlistid,
@@ -36,3 +38,72 @@ where Playlistid=11;
 +------------+-----------------+
 |         11 | Brazilian Music |
 +------------+-----------------+
+
+Q5)Return the Customer Id, Invoice Date, and Billing City from the Invoices table. What city is associated with Customer ID number 42? 
+What was the invoice date for the customer in Santiago?
+Ans:Select
+BillingCity
+From Invoices
+where
+CustomerId=42;
+Select
+InvoiceDate
+From Invoices
+where
+BillingCity="Santiago";
+Bordeaux
+
+2009-04-04 
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q6)Return the First Name, Last Name, Email, and Phone, from the Customers table. What is the telephone number for Jennifer Peterson?
+Select FirstName, 
+LastName, 
+Email, 
+Phone
+From Customers
+where FirstName="Jennifer"
+and LastName="Peterson";
+Jennifer Peterson's phone number is: +1 (604) 688-2255
+A simple select statement is the foundation to almost all queries. You should be able to write this in your sleep. 
+The only way to get comfortable writing these statements is practice writing them until it comes naturally.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Q7)
+Ans: Select Sum(UnitPrice),
+TrackId, 
+GenreId, 
+Composer, 
+UnitPrice 
+From Tracks;
++----------------+---------+---------+--------------+-----------+
+| Sum(UnitPrice) | TrackId | GenreId | Composer     | UnitPrice |
++----------------+---------+---------+--------------+-----------+
+|        3680.97 |    3503 |      10 | Philip Glass |      0.99 |
++----------------+---------+---------+--------------+-----------+
+Notice that all the tracks listed are $0.99. 
+
+Also, notice that you were limited to 25 lines. This is because of Coursera's server storage capacity.
+However, depending on the size of your dataset, would you want to set a limit?
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Q9)Select all the columns from the Media Types table and limit the results to 50 records. What happened when you ran this query? Were you able to get all 50 records?
+Ans: There are only 5 records given and we can't limit 50. If there were more than 50 records given in the question, Yes we can limit 50 and get those records we wanted.
+Unfortunately, Coursera's code block feature limits queries to 25 lines because of server storage capacity.
+However, regardless of this feature it is important for you to note that 50 records would have likely been showing in a normal 
+SQL query with a limit in the code line as seen above. (5 records are shown.) So as you work through the exercises of this course, please keep this in mind.
+
+
+
+Q10)Select all the columns from the Albums table and limit the results to 5 records. How many columns are in the albums table? 
+What is the name of the 9th album in this list?
+Ans: Yes, there are only 3 columns in the albums table. 
+
+The 9th album's name is: Plays Metallica By Four Cellos, you should have been able to retrieve this by changing the limit number in the query. Here is how they should look:
+Select *
+From Albums
+Limit 10;
+//For Finding the 9th One//

@@ -1,0 +1,26 @@
+Retrieve all the data from the tracks table. Who is the composer for track 18?
+Answer: Select composer
+From Tracks
+where trackid = 18;
++----------+
+| Composer |
++----------+
+| AC/DC    |
++----------+
+
+
+Retrieve all data from the invoices table. What is the billing address for customer 31?
+Answer: Select billingaddress
+From Invoices
+where customerid = 31;
++-----------------------+
+| BillingAddress        |
++-----------------------+
+| 194A Chain Lake Drive |
+| 194A Chain Lake Drive |
+| 194A Chain Lake Drive |
+| 194A Chain Lake Drive |
+| 194A Chain Lake Drive |
+| 194A Chain Lake Drive |
+| 194A Chain Lake Drive |
++-----------------------+

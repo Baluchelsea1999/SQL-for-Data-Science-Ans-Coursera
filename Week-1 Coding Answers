@@ -24,3 +24,15 @@ where customerid = 31;
 | 194A Chain Lake Drive |
 | 194A Chain Lake Drive |
 +-----------------------+
+
+
+Return the playlist id, and name from the playlists table. How many playlists are there? Which would you classify is your favorite from this list?
+Answer:Select Playlistid,
+Name
+From Playlists
+where Playlistid=11;
++------------+-----------------+
+| PlaylistId | Name            |
++------------+-----------------+
+|         11 | Brazilian Music |
++------------+-----------------+
